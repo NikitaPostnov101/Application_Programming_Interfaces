@@ -1,0 +1,27 @@
+<html>
+<meta charset="UTF-8">
+<head>
+    <h1>Weather Page</h1>
+    <title>WEATHER PAGE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.5/jquery.min.js"></script>
+    <script>
+		var settings = {
+		"url": "https://ajax.googleapis.org/data/2.5/weather?q=Moscow&..", "method": "GET", "timeout": 0, };
+		$.ajax(settings).done(function (respone){
+			console.log(respone);
+			var content = respone.main.temp;
+			$("#winSpeed").append(resone.wind.speed);
+			$("#temp").append(respone.main.temp);
+			$("#tempMax").append(respone.main.temp_max);
+			$("#tempMin").append(respone.main.temp_min);
+			$("#pressure").append(respone.main.pressure);
+		});
+	</script>
+</head>
+<body>
+wind speed: <span id="windSpeed"></span> m/s <br>
+temp:<span id="temp"></span> c <br>
+temp max: <></span> c<br>
+temp min: <></span> c<br>
+pressure: <span id="pressure"></span> H/m <br>
+</body>

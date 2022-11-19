@@ -1,0 +1,40 @@
+65af4ad16fbcb2100103319180454e9b - мой API
+	pip install googletrans - вводить в терминале (Win+r, далее ввести cmd), установка библиотеки Гугл переводчика.
+	import googletrans - импортирует модуль googletrans.
+	from googletrans import Translator - импортирует класс Translator из 
+модуля googletrans.
+	translator = Translator() - создаём объект класса Translator.
+	После создания оббъекта класса Translator, передаём на исходном языке параметр методу 
+translate() объекта класса Translator().
+	print(googletrans.LANGUAGES) -  список всех поддерживаемых языков,
+вместе с их сокращенной записью.
+	
+	result = translator.translate('Привет, это работа студента ИКБО-24-20 Постнова Никиты') - По умолчанию метод translate() 
+возвращает английский перевод текста, переданного ему. В нашем случае объект, возвращаемый
+методом translate(), сохраняется в переменной result.
+	код вместе:
+	
+pip install googletrans
+
+
+import googletrans
+from googletrans import Translator
+translator = Translator()
+print(googletrans.LANGUAGES) #не обязательная строчка, просто для ознакомления
+result = translator.translate('Привет, это работа студента ИКБО-24-20 Постнова Никиты')
+print(result.origin)#Вывод оригинального текста
+print(result.text)#Перевод,по умолчнию английский 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+вывести:
+result = translator.translate('Привет, я Никита', src='ru', dest='en'
+Исспользовался API Google Translator - https://translate.google.com/?sl=ru&tl=en&op=translate
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import googletrans
+from googletrans import Translator
+translator = Translator()
+print(googletrans.LANGUAGES)
+result = translator.translate('Привет, это работа студента ИКБО-24-20 Постнова Никиты')
+print(result.origin)
+print(result.text)
